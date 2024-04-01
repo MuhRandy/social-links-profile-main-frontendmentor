@@ -26,7 +26,7 @@ Users should be able to:
 
 #### Desktop Preview
 
-![Desktop Preview](./screenshots/desktop-preview.png)
+![Desktop Preview](./screenshots/dekstop-preview.png)
 
 #### Mobile Preview
 
@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/MuhRandy/social-links-profile-main-frontendmentor)
+- Live Site URL: [Github Pages](https://muhrandy.github.io/social-links-profile-main-frontendmentor/)
 
 ## My process
 
@@ -78,11 +78,11 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [W3School](https://www.w3schools.com/) - This helped me for almost anything, just like the documentation of HTML, CSS, and javascript.
+- [Stack Overflow](https://stackoverflow.com/) - This is an amazing forum where you can ask or find someone with similiar problem you have that already solved.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Muhammad Randy](https://mrandy-portfolio.web.app/)
+- Frontend Mentor - [@MuhRandy](https://www.frontendmentor.io/profile/MuhRandy)
+- Twitter - [@RandyThz](https://twitter.com/RandyThz)
