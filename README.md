@@ -52,29 +52,145 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+When I put `<a>` tag on `<li>` I am wondering why when I hover on `<li>`, it text color not change. I already write I on `<li>` like this:
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  /* Primary */
+  --green: hsl(75, 94%, 57%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+li {
+  list-style: none;
+
+  background-color: var(--grey);
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: var(--green);
+  color: var(--grey);
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+The background did change, but not the text. So I change the css again to be like this:
+
+```css
+:root {
+  /* Primary */
+  --green: hsl(75, 94%, 57%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+li {
+  list-style: none;
+
+  background-color: var(--grey);
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+li a {
+  text-decoration: none;
+}
+
+li:hover {
+  background-color: var(--green);
+}
+
+li a:hover {
+  color: var(--grey);
+}
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+And the text still not change until you hovering it directly. I don't want that, what I want is when I hovering on `<li>` the background and the text will change. So I have an idea to make the just the `<a>` element that change when hovering and I will make it covering the whole `<li>` and I write this on css:
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```css
+:root {
+  /* Primary */
+  --green: hsl(75, 94%, 57%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+li {
+  list-style: none;
+
+  background-color: var(--grey);
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+li a {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+li a:hover {
+  background-color: var(--green);
+  color: var(--grey);
+}
+```
+
+And I wondering why this doesn't work. Turn out the `<a>` is inline element, so I can't change the size of the element (width and height). When I make the display to be block. It work the way I want it. This is what I write in the end:
+
+```css
+:root {
+  /* Primary */
+  --green: hsl(75, 94%, 57%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+li {
+  list-style: none;
+
+  background-color: var(--grey);
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+li a {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+li a:hover {
+  background-color: var(--green);
+  color: var(--grey);
+}
+```
 
 ### Useful resources
 
